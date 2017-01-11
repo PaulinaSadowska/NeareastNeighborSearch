@@ -1,8 +1,9 @@
-import slow_nn.paths as inp
-import slow_nn.data_preparation as dp
-import file_util as fu
-import operator
 import datetime as d
+import operator
+
+import file_util as fu
+import paths as inp
+import slow_nn.data_preparation as dp
 
 
 def intersect(a, b):
@@ -48,4 +49,4 @@ def find_nn():
     print("NN Search for {0} users took {1}".format(len(users_data), d.datetime.now() - before))
 
 
-find_nn()
+#dp.prepare_data(inp.input_path, inp.first100_users_path, inp.prepared_data_path)
