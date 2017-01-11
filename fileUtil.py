@@ -18,3 +18,12 @@ def getArray(file_path):
             output.append(line.strip("\n"))
 
     return output
+
+
+def write_text(file_path, data):
+    with open(file_path, mode='wt', encoding='utf-8') as f:
+        f.write(data)
+
+
+def open_file(file_path):
+    return open(file_path, 'r', encoding='utf8')
