@@ -1,6 +1,7 @@
 {
   "folderPath": "../data/",
   "dataPath": "facts.csv",
+  "shortDataPath": "facts_short.csv",
   "outputPath":"output.txt",
   "expectedOutputPath":"expected_result.txt"
 }
