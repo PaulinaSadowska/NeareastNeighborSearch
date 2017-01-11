@@ -1,0 +1,5 @@
+{
+  "folderPath": "../data/",
+  "dataPath": "facts.csv",
+  "outputPath":"output.txt"
+}
