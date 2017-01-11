@@ -41,13 +41,14 @@ def prepare_data_ids(input_path, users_path, prepared_data_path):
     # CREATE TABLE OF SIG(n, c)
     sorted_songs = sorted(songs_id.values())
     hashes = hh.generate_hashes(list(sorted_songs), num_of_hashes)
-    prepared_data = [""] * num_of_hashes
-    for i in range(num_of_hashes):
-        for user_id in users:
-            min_occ = hh.min_occurring_hash(hashes, i, users[user_id])
-            prepared_data[i] += "{0},".format(min_occ)
+    prepared_data = [""] * len(users)
 
-        prepared_data[i] = prepared_data[i].strip(',')
+    for user_id in users:
+        for i in range(num_of_hashes):
+            min_occ = hh.min_occurring_hash(hashes, i, users[user_id])
+            prepared_data[user_id] += "{0},".format(min_occ)
+
+        prepared_data[user_id] = prepared_data[user_id].strip(',')
 
     users_id_inv = {y: x for x, y in users_id.items()}
     # SAVE DATA
