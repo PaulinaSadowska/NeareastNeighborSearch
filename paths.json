@@ -2,7 +2,9 @@
   "folderPath": "../data/",
   "dataPath": "facts.csv",
   "shortDataPath": "facts_short.csv",
+  "first100": "first100.csv",
   "preparedDataPath": "prepared_facts.json",
+  "outputPath100": "output_100.json",
   "outputPath": "output.json",
   "expectedOutputPath": "expected_result.txt"
 }
