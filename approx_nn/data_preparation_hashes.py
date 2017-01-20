@@ -4,7 +4,8 @@ import approx_nn.hash_helper as hh
 
 
 def prepare_data_ids(input_path, users_path, prepared_data_path):
-    num_of_hashes = 2
+    num_of_hashes = 16
+    p = 1583539
     before = d.datetime.now()
     users_id = {}
     songs_id = {}
@@ -40,7 +41,7 @@ def prepare_data_ids(input_path, users_path, prepared_data_path):
 
     # CREATE TABLE OF SIG(n, c)
     sorted_songs = sorted(songs_id.values())
-    hashes = hh.generate_hashes(list(sorted_songs), num_of_hashes)
+    hashes = hh.generate_hashes(list(sorted_songs), num_of_hashes, p)
     prepared_data = [""] * len(users)
 
     for user_id in users:

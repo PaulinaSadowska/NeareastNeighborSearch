@@ -1,20 +1,20 @@
 import random as r
 
 
-def generate_hash_functions(p):
+def generate_hash_functions(num_of_hashes, p):
     a = []
     b = []
-    for i in range(p):
+    for i in range(num_of_hashes):
         a.append(r.randint(1, p - 1))
         b.append(r.randint(0, p - 1))
     return a, b
 
 
-def generate_hashes(songs, num_of_hashes):
+def generate_hashes(songs, num_of_hashes, p):
     num_of_rows = len(songs)
     h, w = num_of_rows, num_of_hashes
     hashes = [[0 for x in range(w)] for y in range(h)]
-    [a, b] = generate_hash_functions(num_of_hashes)
+    [a, b] = generate_hash_functions(num_of_hashes, p)
     for row_num in range(num_of_rows):
         for col_num in range(num_of_hashes):
             hashes[songs[row_num]][col_num] = (a[col_num] * row_num + b[col_num]) % p % num_of_rows
