@@ -1,6 +1,6 @@
 import file_util as fu
 import datetime as d
-import nn.hash_helper as hh
+import approx_nn.hash_helper as hh
 
 
 def prepare_data_ids(input_path, users_path, prepared_data_path):

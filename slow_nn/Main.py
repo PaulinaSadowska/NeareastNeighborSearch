@@ -7,13 +7,11 @@ import slow_nn.data_preparation as dp
 
 
 def intersect(a, b):
-    """ return the intersection of two lists """
-    return len(list(set(a) & set(b)))
+    return len(set(a) & set(b))
 
 
 def union(a, b):
-    """ return the union of two lists """
-    return len(list(set(a) | set(b)))
+    return len(set(a) | set(b))
 
 
 def jaccard(u1, u2):
@@ -49,4 +47,5 @@ def find_nn():
     print("NN Search for {0} users took {1}".format(len(users_data), d.datetime.now() - before))
 
 
-#dp.prepare_data(inp.input_path, inp.first100_users_path, inp.prepared_data_path)
+dp.prepare_data(inp.input_path, inp.first100_users_path, inp.prepared_data_path)
+#find_nn()

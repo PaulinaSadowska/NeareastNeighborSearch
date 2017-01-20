@@ -4,10 +4,13 @@
   "shortDataPath": "input/facts_short.csv",
 
   "first100": "slow_nn/first100.csv",
-  "preparedDataPath": "slow_nn/prepared_facts.json",
-  "outputPath100": "slow_nn/output_100.json",
+  "outputPath100": "sparse_nn/output_100.json",
 
-  "usersId": "hashes/usersIdMap.json",
+  "preparedDataPath": "slow_nn/prepared_facts.json",
+  "usersId": "faster_nn/usersIdMap.json",
+  "sparseFirst100": "faster_nn/first100.csv",
+  "sparseDataPath": "faster_nn/prepared_facts.json",
+
   "preparedHashPath": "hashes/prepared_facts_hashes.csv",
 
   "outputPath": "output.json"

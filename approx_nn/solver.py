@@ -1,5 +1,5 @@
 import paths as inp
-import nn.data_preparation_hashes as pd
+import approx_nn.data_preparation_hashes as pd
 import file_util as fu
 
 pd.prepare_data_ids(inp.input_path, inp.users_id_map_path, inp.prepared_data_hashes_path)

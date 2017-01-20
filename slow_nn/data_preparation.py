@@ -24,11 +24,5 @@ def prepare_data(input_path, first_100_users_path, prepared_data_path):
                 if len(users) == 100:
                     fu.write_text(first_100_users_path, ",".join(users.keys()))
 
-    songs_sums = []
-    for user in users:
-        songs_sums.append(len(users[user]))
-    print("user on average listened to {0} unique songs".format(sum(songs_sums)/len(songs_sums)))
-
     fu.write_json(prepared_data_path, users)
-    print(len(songs))
     print("data prepared in {0}".format(d.datetime.now() - before))
