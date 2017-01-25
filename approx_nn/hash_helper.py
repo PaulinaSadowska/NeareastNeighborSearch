@@ -17,13 +17,13 @@ def generate_hashes(songs, num_of_hashes, p):
     [a, b] = generate_hash_functions(num_of_hashes, p)
     for row_num in range(num_of_rows):
         for col_num in range(num_of_hashes):
-            hashes[songs[row_num]][col_num] = (a[col_num] * row_num + b[col_num]) % p % num_of_rows
+            hashes[songs[row_num]][col_num] = (a[col_num] * row_num + b[col_num]) % p % num_of_rows-1
 
     return hashes
 
 
 def min_occurring_hash(hashes, col_num, songs):
-    min_hash = 9999
+    min_hash = 999999999
     for i in range(len(songs)):
         row = songs[i]
         if hashes[row][col_num] < min_hash:

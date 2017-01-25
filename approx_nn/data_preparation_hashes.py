@@ -44,12 +44,12 @@ def prepare_data_ids(input_path, users_path, prepared_data_path):
     hashes = hh.generate_hashes(list(sorted_songs), num_of_hashes, p)
     prepared_data = [""] * len(users)
 
-    for user_id in users:
-        for i in range(num_of_hashes):
+    for i in range(num_of_hashes):
+        for user_id in users:
             min_occ = hh.min_occurring_hash(hashes, i, users[user_id])
-            prepared_data[user_id] += "{0},".format(min_occ)
+            prepared_data[i] += "{0},".format(min_occ)
 
-        prepared_data[user_id] = prepared_data[user_id].strip(',')
+        prepared_data[i] = prepared_data[i].strip(',')
 
     users_id_inv = {y: x for x, y in users_id.items()}
     # SAVE DATA
