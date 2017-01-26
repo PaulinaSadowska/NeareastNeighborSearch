@@ -1,7 +1,7 @@
 import paths as inp
 import file_util as fu
 
-numOfLines = 50000
+numOfLines = 200000
 lines = []
 
 with fu.open_file(inp.input_path) as f:
